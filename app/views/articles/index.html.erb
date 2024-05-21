@@ -1,0 +1,5 @@
+<ul class="d-flex align-items-center justify-content-center mt-5" style="list-style: none; flex-wrap: wrap; margin: 0; padding: 0; gap: 15px">
+  <% @articles.each do |article| %>
+    <li class="btn d-flex align-items-center justify-content-center" style="background-color: <%= article.content %>; height: 240px; width: 360px; font-size: 48px"><%= link_to "#{article.title}", article_path(article) %></li>
+  <% end %>
+</ul>

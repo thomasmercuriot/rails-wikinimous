@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center align-items-center" style="margin-top: 100px; flex-direction: column; gap: 30px">
+  <h1><%= @article.title %></h1>
+  <h2 class="btn d-flex align-items-center justify-content-center" style="background-color: <%= @article.content %>; height: 240px; width: 360px; font-size: 80px"><%= @article.content %></h2>
+
+  <h2><%= link_to "Edit Color", edit_article_path(@article) %></h2>
+  <h2><%= link_to "Go Back", "/articles/" %></h2>
+
+  <%= link_to "Delete", article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+</div>

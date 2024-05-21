@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center align-items-center" style="margin-top: 100px; flex-direction: column; gap: 100px">
+  <%= form_with model: @article do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+    <%= f.submit %>
+  <% end %>
+
+  <h2><%= link_to "Go Back", "/articles/" %></h2>
+</div>
